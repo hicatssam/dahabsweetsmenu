@@ -16,7 +16,7 @@
     button { font: inherit; }
     button:focus-visible, .viewer:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
     .app { min-height: 100svh; width: 100%; display: flex; flex-direction: column; align-items: center; gap: 12px; padding: calc(env(safe-area-inset-top) + 18px) 16px calc(env(safe-area-inset-bottom) + 16px); }
-    .header { width: min(100%, 740px); display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+    .header { min-width: 0; max-width: 100%; width: min(100%, 740px); display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
     h1 { margin: 0; color: var(--gold); font-family: Georgia, 'Times New Roman', serif; font-size: 29px; font-weight: 400; line-height: 1.1; }
     .subtitle { margin: 5px 0 0; font-size: 13px; color: #666666; }
     .btn { border: 1px solid var(--gold); color: #655317; background: transparent; cursor: pointer; transition: background .18s, border-color .18s, box-shadow .18s, transform .18s; min-height: 46px; padding: 11px 16px; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-weight: 500; font-size: 14px; line-height: 1.5; }
@@ -24,10 +24,10 @@
     .btn:active { transform: scale(.97); }
     .btn:disabled { color: #b7b09a; border-color: #e9e4d5; background: #faf9f5; cursor: default; transform: none; box-shadow: none; }
     #zoomBtn { border-color: var(--line); background: #fcf8e8; padding-inline: 12px; }
-    .sections { width: min(100%, 740px); display: flex; gap: 20px; overflow-x: auto; padding: 0 0 3px; scrollbar-width: thin; scrollbar-color: #efe2ad transparent; }
+    .sections { min-width: 0; max-width: 100%; width: min(100%, 740px); display: flex; gap: 20px; overflow-x: auto; padding: 0 0 3px; scrollbar-width: thin; scrollbar-color: #efe2ad transparent; }
     .section-btn { font: inherit; flex: 0 0 auto; min-height: 44px; padding: 8px 6px; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #555555; cursor: pointer; font-size: 14px; font-weight: 500; line-height: 1.5; transition: color .18s; }
     .section-btn[aria-current="page"] { color: #655317; border-bottom-color: var(--gold); background: #fcf8e8; }
-    .viewer { position: relative; width: min(100%, calc(clamp(280px, 100svh - 245px, 1100px) * 2245 / 4371)); aspect-ratio: 2245 / 4371; touch-action: pan-y pinch-zoom; user-select: none; }
+    .viewer { min-width: 0; max-width: 100%; position: relative; width: min(100%, calc(clamp(280px, 100svh - 245px, 1100px) * 2245 / 4371)); aspect-ratio: 2245 / 4371; touch-action: pan-y pinch-zoom; user-select: none; }
     .magazine { width: 100%; height: 100%; position: relative; perspective: 2000px; }
     .page-stack { position: absolute; inset: 2px -3px -3px 3px; background: #f0ead4; box-shadow: 0 4px 16px #655b3714; }
     .page, .flip-page { position: absolute; inset: 0; overflow: hidden; border-radius: 1px; background: #fff; backface-visibility: hidden; }
@@ -82,7 +82,7 @@
     <div class="zoom-scroll" id="zoomScroll"><img id="zoomImage" alt="" /></div>
   </dialog>
   <script>
-    const pages = ['intro', 'sheet1', 'sheet2', 'sheet3', 'sheet4', 'sheet5', 'sheet6', 'sheet7', 'outro'].map(name => `assets/${name}.jpeg`);
+    const pages = ['intro', 'sheet1', 'sheet2', 'sheet3', 'sheet4', 'sheet5', 'sheet6', 'sheet7', 'outro'].map(name => `/menu/assets/${name}.jpeg`);
     const labels = ['الغلاف', 'حلويات', 'بان كيك ووافل', 'قهوة كلاسيك', 'قهوة مميزة وفرابيه', 'آيس كوفي وماتشا', 'مشروبات منعشة', 'ميلك شيك وعصائر', 'الختام'];
     const pageBox = document.getElementById('pageBox');
     const flipPage = document.getElementById('flipPage');
