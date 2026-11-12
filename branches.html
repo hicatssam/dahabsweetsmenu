@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#160b06">
+<title>فروع حلويات دهب | العناوين وأرقام التواصل</title>
+<meta name="description" content="تعرّف على فروع حلويات دهب في غزة، وأرقام التواصل والواتساب لكل فرع.">
+<link rel="icon" href="/images/dahab-sweets.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#100905;--panel:#241308;--gold:#e7b857;--cream:#ffe7b0;--muted:#c9b594}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Tajawal,Arial,sans-serif;color:var(--cream);background:radial-gradient(ellipse at 50% 0%,#492b0e 0%,#1c1009 33%,var(--bg) 78%);min-height:100vh}
+a{color:inherit;text-decoration:none}button{font:inherit}
+.container{max-width:1120px;margin:auto;padding:0 22px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 0;border-bottom:1px solid #9e762c44}
+.brand{display:flex;gap:12px;align-items:center;font-weight:900;font-size:1.2rem}.brand img{width:58px;height:58px;object-fit:contain}
+.back{border:1px solid #bd8a355c;border-radius:30px;padding:11px 17px;color:var(--cream);font-weight:800;transition:.2s}.back:hover{background:#4d3016}
+.hero{text-align:center;padding:65px 0 35px}.eyebrow{display:inline-block;border:1px solid #ae7e3980;border-radius:25px;padding:8px 18px;background:#d39a2620;color:var(--gold);font-weight:900}
+h1{font-size:clamp(2.2rem,5vw,4rem);margin:20px 0 12px;font-weight:900;letter-spacing:-1px}.hero p{font-size:1.07rem;color:var(--muted);line-height:1.9;max-width:650px;margin:auto}
+.ornament{height:2px;width:78px;margin:27px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px;padding-bottom:55px}
+.branch{position:relative;overflow:hidden;padding:29px;border-radius:23px;border:1px solid #99702e78;background:linear-gradient(140deg,#38200f,#1b0e07 85%);box-shadow:0 15px 36px #0005;transition:transform .25s,border-color .25s}
+.branch:hover{transform:translateY(-4px);border-color:#e1b356}
+.branch:before{content:"";position:absolute;inset:-85px auto auto -80px;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,#cc9b3222,transparent 70%);pointer-events:none}
+.branch h2{margin:0 0 19px;font-size:1.48rem;color:#ffe0a0}
+.tag{font-size:.72rem;color:#e5bb66;border:1px solid #b98c454c;border-radius:20px;padding:5px 11px;display:inline-block;margin-bottom:15px}
+.detail{display:flex;align-items:flex-start;gap:13px;margin:13px 0;color:#ead6b0;line-height:1.65}.detail strong{color:#bba887;display:block;font-size:.82rem}.detail span{font-size:1.05rem}
+.ico{display:inline-flex;align-items:center;justify-content:center;flex:0 0 33px;height:33px;border-radius:11px;background:#c3982d20;color:var(--gold);font-size:1.1rem}
+.pending{color:#ad9774;font-size:.91rem}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}
+.action{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:13px;font-weight:900;transition:.2s;flex:1;min-width:135px;text-align:center}
+.whatsapp{background:linear-gradient(135deg,#c18c30,#f1c96d);color:#201006}.whatsapp:hover{filter:brightness(1.1)}
+.call{border:1px solid #c49b526b;color:#f5d591}.call:hover{background:#70471955}
+.footer{text-align:center;border-top:1px solid #ad803344;padding:25px 0 35px;color:#bbaa8e;font-size:.92rem}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.hero{padding:40px 0 22px}.branch{padding:23px}.brand img{width:45px;height:45px}.back{font-size:.84rem;padding:10px}.actions{gap:8px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="container">
+<header class="header"><a class="brand" href="/" aria-label="العودة إلى حلويات دهب"><img src="/images/dahab-sweets.png" alt="شعار حلويات دهب"><span>حلويات دهب</span></a><a class="back" href="/">↩ العودة للموقع</a></header>
+<main>
+<section class="hero"><span class="eyebrow">دهب أقرب إليك</span><h1>فروع حلويات دهب</h1><p>وين ما كنت، دهب قريب منك. اختر الفرع الأنسب وتواصل معه مباشرة عبر الهاتف أو واتساب.</p><div class="ornament"></div></section>
+<section class="grid" id="branches" aria-label="فروع حلويات دهب"></section>
+</main>
+<footer class="footer">حلويات دهب · كل لحظة حلوة تستاهل دهب<br>© <span id="year"></span> جميع الحقوق محفوظة</footer>
+</div>
+<script>
+/* بيانات الفروع مستمدة من القائمة الموجودة في index.html.
+   استكمل خاصية address عند توفر العناوين التفصيلية المعتمدة. */
+const branches=[
+{id:"nuseirat",name:"فرع النصيرات",area:"النصيرات",address:"",phone:"970592555055"},
+{id:"deir_al_balah",name:"فرع دير البلح",area:"دير البلح",address:"",phone:"970599700045"},
+{id:"gaza_al_nasr",name:"فرع غزة النصر",area:"غزة – النصر",address:"",phone:"970592303092"},
+{id:"al_samer",name:"فرع السامر",area:"غزة – السامر",address:"",phone:"970597550550"},
+{id:"khan-younis",name:"فرع خانيونس",area:"خانيونس",address:"",phone:"970597336111"}
+];
+function safe(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+const root=document.getElementById("branches");
+root.innerHTML=branches.map((b,i)=>`<article class="branch" id="${safe(b.id)}">
+<span class="tag">فرع ${String(i+1).padStart(2,"0")}</span>
+<h2>${safe(b.name)}</h2>
+<div class="detail"><span class="ico" aria-hidden="true">⌖</span><div><strong>المنطقة</strong><span>${safe(b.area)}</span></div></div>
+<div class="detail"><span class="ico" aria-hidden="true">▤</span><div><strong>العنوان التفصيلي</strong><span class="${b.address?'':'pending'}">${b.address?safe(b.address):'سيتم إضافة العنوان قريبًا'}</span></div></div>
+<div class="detail"><span class="ico" aria-hidden="true">☎</span><div><strong>رقم التواصل</strong><span dir="ltr">${safe("+"+b.phone)}</span></div></div>
+<div class="actions">
+<a class="action whatsapp" target="_blank" rel="noopener noreferrer" href="https://wa.me/${encodeURIComponent(b.phone)}?text=${encodeURIComponent('مرحباً حلويات دهب، أريد التواصل مع '+b.name)}" aria-label="تواصل عبر واتساب مع ${safe(b.name)}">◉ تواصل عبر واتساب</a>
+<a class="action call" href="tel:+${encodeURIComponent(b.phone)}" aria-label="اتصل بـ ${safe(b.name)}">☎ اتصال هاتفي</a>
+</div></article>`).join("");
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body></html>
